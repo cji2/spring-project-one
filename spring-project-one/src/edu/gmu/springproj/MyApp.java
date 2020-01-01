@@ -5,7 +5,8 @@ public class MyApp {
 	public static void main(String[] args) {
 
 		// create the object.
-		BaseballCoach aCoach = new BaseballCoach();
+		// BaseballCoach aCoach = new BaseballCoach();
+		Coach aCoach = new BaseballCoach();
 		
 		// use the object.		
 		String result = aCoach.getDailyWorkout();
