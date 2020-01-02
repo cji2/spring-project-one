@@ -8,10 +8,16 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Define your beans here -->
-    <bean id="myCoach"
-    	class="edu.gmu.springproj.BibleCoach">
+    <bean id="myCoach" class="edu.gmu.springproj.BaseballCoach">
+    	<!-- inject the dependency/ helper using “constructor injection”  -->
+    	<constructor-arg ref="myFortune" />
     </bean>
     
+    <!-- define dependency/ helper 
+        HappyFortuneService is the implementation of the interface, FortuneService      -->
+	<bean id= "myFortune" class= "edu.gmu.springproj.HappyFortuneService">
+	</bean>
+
     <!--  Add a logger configuration to see logging messages.		
           For more detailed logs, set values to "FINEST"
           For info on logging levels, see: http://www.vogella.com/tutorials/Logging/article.html
