@@ -9,7 +9,7 @@
 
     <!-- Define your beans here -->
     <bean id="myCoach"
-    	class="edu.gmu.springproj.BaseballCoach">
+    	class="edu.gmu.springproj.BibleCoach">
     </bean>
     
     <!--  Add a logger configuration to see logging messages.		
