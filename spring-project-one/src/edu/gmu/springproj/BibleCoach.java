@@ -8,7 +8,7 @@ public class BibleCoach implements Coach {
 	}
 
 	@Override
-	public String getDailyFourtune() {
+	public String getDailyFortune() {
 		// TODO Auto-generated method stub
 		return null;
 	}
