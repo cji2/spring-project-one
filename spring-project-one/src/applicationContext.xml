@@ -9,18 +9,18 @@
 
     <!-- Define your beans here -->
     <bean id="myCoach"
-    	class="edu.gmu.springproj.TrackCoach">
+    	class="edu.gmu.springproj.BaseballCoach">
     </bean>
     
     <!--  Add a logger configuration to see logging messages.		
           For more detailed logs, set values to "FINEST"
           For info on logging levels, see: http://www.vogella.com/tutorials/Logging/article.html
     -->
-	<bean id="myLoggerConfig" 
+	<!-- bean id="myLoggerConfig" 
 		class="com.luv2code.springdemo.MyLoggerConfig" 
 		init-method="initLogger"
  	>
     	<property name="rootLoggerLevel" value="FINE" />
     	<property name="printedLoggerLevel" value="FINE"/>
-	</bean>
+	</bean -->
 </beans>
