@@ -1,6 +1,14 @@
 package edu.gmu.springproj;
 
 public class BaseballCoach implements Coach {
+	
+	// define a private field for dependency
+	private FortuneService fortuneService;
+	
+	// define a constructor for dependency injection.
+	public BaseballCoach(FortuneService aFortuneService) {
+		fortuneService = aFortuneService;
+	}
 
 	@Override
 	public String getDailyWorkout() {
@@ -8,8 +16,8 @@ public class BaseballCoach implements Coach {
 	}
 
 	@Override
-	public String getDailyFourtune() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getDailyFortune() {
+		// use my fortune service to get a fortune
+		return fortuneService.getFortune();
 	}
 }
