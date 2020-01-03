@@ -18,6 +18,11 @@
     	<constructor-arg ref="myFortune" />
     </bean>
     
+    <bean id="myCricketCoach" class="edu.gmu.springproj.CricketCoach">
+    	<!-- this is setter injection -->
+    	<property name="fortuneService" ref="myFortune" />
+    </bean>
+    
     <!--  Add a logger configuration to see logging messages.		
           For more detailed logs, set values to "FINEST"
           For info on logging levels, see: http://www.vogella.com/tutorials/Logging/article.html
