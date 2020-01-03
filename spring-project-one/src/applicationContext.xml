@@ -21,6 +21,11 @@
     <bean id="myCricketCoach" class="edu.gmu.springproj.CricketCoach">
     	<!-- this is setter injection -->
     	<property name="fortuneService" ref="myFortune" />
+
+		<!-- These are setter injection of literal values
+		     Based on this xml config file, Spring will call each setter. -->    	
+    	<property name="emailAddress" value="pschji@gmu.edu" />
+		<property name="team" value="Soli Deo Gloria!" />
     </bean>
     
     <!--  Add a logger configuration to see logging messages.		
