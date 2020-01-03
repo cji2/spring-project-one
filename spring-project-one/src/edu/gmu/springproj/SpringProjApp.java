@@ -18,6 +18,9 @@ public class SpringProjApp {
 		// call methods on the bean.
 		System.out.println(aCoach.getDailyWorkout());
 		
+		// call new method for fortune service.
+		System.out.println(aCoach.getDailyFortune());
+		
 		// close the application context.
 		context.close();
 	}
