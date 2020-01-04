@@ -6,7 +6,7 @@ public class RandomFortuneService implements FortuneService {
 	
 	// create an array of strings.
 	private String[] data = {
-			"The fear of the LORD is the beginning of knowldge",
+			"The fear of the LORD is the beginning of knowledge",
 			"Listen to your father's instruction",
 			"If sinners entice you, do not give in to them"
 	};
