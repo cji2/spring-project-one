@@ -7,6 +7,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<!--  load the properties file: sport.properties -->
+	<context:property-placeholder location="classpath:sport.properties" />
+
     <!-- define dependency/ helper 
         HappyFortuneService is the implementation of the interface, FortuneService      -->
 	<bean id= "myFortune" class= "edu.gmu.springproj.HappyFortuneService">
@@ -23,9 +26,13 @@
     	<property name="fortuneService" ref="myFortune" />
 
 		<!-- These are setter injection of literal values
-		     Based on this xml config file, Spring will call each setter. -->    	
+		     Based on this xml config file, Spring will call each setter. -->  
+		<!--   	
     	<property name="emailAddress" value="pschji@gmu.edu" />
 		<property name="team" value="Soli Deo Gloria!" />
+		-->
+		<property name="emailAddress" value="${gmu.email}" />
+		<property name="team" value="${gmu.team}" />
     </bean>
     
     <!--  Add a logger configuration to see logging messages.		
