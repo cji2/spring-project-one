@@ -12,7 +12,7 @@
 	</bean>
 
     <!-- Define your beans here -->
-    <bean id="myGolfCoach" class="edu.gmu.springproj.GolfCoach">
+    <bean id="myGolfCoach" class="edu.gmu.springproj.GolfCoach" scope="prototype">
     	<!-- set up constructor injection -->
     	<constructor-arg ref="myFortuneService" />
     </bean>
