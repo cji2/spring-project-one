@@ -15,7 +15,15 @@
 	<bean id= "myFortune" class= "edu.gmu.springproj.HappyFortuneService">
 	</bean>
 
+	<bean id= "myFortuneService" class= "edu.gmu.springproj.RandomFortuneService">
+	</bean>
+
     <!-- Define your beans here -->
+    <bean id="myGolfCoach" class="edu.gmu.springproj.GolfCoach">
+    	<!-- set up constructor injection -->
+    	<constructor-arg ref="myFortuneService" />
+    </bean>
+    
     <bean id="myCoach" class="edu.gmu.springproj.TrackCoach">
     	<!-- inject the dependency/ helper using “constructor injection”  -->
     	<constructor-arg ref="myFortune" />
