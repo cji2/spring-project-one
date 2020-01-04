@@ -10,6 +10,7 @@ public class TrackCoach implements Coach {
 	
 	// define a constructor for dependency injection.
 	public TrackCoach(FortuneService aFortuneService) {
+		System.out.println("TrackCoach: inside an-argument constructor!");
 		fortuneService = aFortuneService;
 	}
 	
@@ -22,5 +23,4 @@ public class TrackCoach implements Coach {
 	public String getDailyFortune() {
 		return fortuneService.getFortune();
 	}
-
 }
